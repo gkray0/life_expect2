@@ -11,9 +11,11 @@
 # You only ever need to install an R package once (or when you re-install R).
 # You need to re-load a library whenever you start a new R session.
 
-install.packages("tidyverse")
+
+#install.packages("tidyverse")
 library(tidyverse)
-install.packages("broom")
+#install.packages("broom")
+
 library(broom)
 
 # Data import
@@ -35,6 +37,7 @@ ggplot(data = le_data %>% filter(state == "California", race == "black", sex == 
 # Save the plot
 ggsave(plot = last_plot(), filename = "./images/ca-black-women-LE.png",
        width = 5, height = 5,device = "png"
+
         )
 
 # R Code
@@ -52,3 +55,6 @@ le_averages
 
 #save this table as a CSV file in the data sub-folder
 write_csv(le_averages, "./data/le_averages.csv")
+=======
+        )
+
